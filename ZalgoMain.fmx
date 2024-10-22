@@ -1,0 +1,128 @@
+object Form16: TForm16
+  Left = 0
+  Top = 0
+  Caption = 'Form16'
+  ClientHeight = 342
+  ClientWidth = 532
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 169.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 355.000000000000000000
+    Size.Height = 214.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Label1'
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Text = 'Hello World'
+    Position.X = 169.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 355.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChangeTracking = TrackBar1Change
+  end
+  object ListBox1: TListBox
+    Anchors = [akLeft, akTop, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 326.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    ShowCheckboxes = True
+    Viewport.Width = 69.000000000000000000
+    Viewport.Height = 322.000000000000000000
+  end
+  object ListBox3: TListBox
+    Anchors = [akLeft, akTop, akBottom]
+    Position.X = 89.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 72.000000000000000000
+    Size.Height = 326.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    ShowCheckboxes = True
+    Viewport.Width = 68.000000000000000000
+    Viewport.Height = 322.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 169.000000000000000000
+    Position.Y = 46.000000000000000000
+    TabOrder = 2
+    Text = 'Zalgo'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object TrackBar1: TTrackBar
+    Anchors = [akLeft, akTop, akRight]
+    CanParentFocus = True
+    Max = 20.000000000000000000
+    Min = 1.000000000000000000
+    Orientation = Horizontal
+    Position.X = 169.000000000000000000
+    Position.Y = 76.000000000000000000
+    Size.Width = 355.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Value = 8.000000000000000000
+    OnChange = TrackBar1Change
+  end
+  object ckAbove: TCheckBox
+    IsChecked = True
+    Position.X = 257.000000000000000000
+    Position.Y = 46.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Above'
+    OnChange = TrackBar1Change
+  end
+  object ckBelow: TCheckBox
+    IsChecked = True
+    Position.X = 338.000000000000000000
+    Position.Y = 46.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Below'
+    OnChange = TrackBar1Change
+  end
+  object TrackBar2: TTrackBar
+    Anchors = [akLeft, akTop, akRight]
+    CanParentFocus = True
+    Min = 12.000000000000000000
+    Orientation = Horizontal
+    Position.X = 169.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 355.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Value = 20.000000000000000000
+    OnChange = TrackBar2Change
+  end
+end
