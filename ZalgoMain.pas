@@ -1,5 +1,12 @@
 ﻿unit ZalgoMain;
-
+{
+https://en.wikipedia.org/wiki/Zalgo_text
+https://en.wikipedia.org/wiki/Combining_Diacritical_Marks
+https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_Extended
+https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_Supplement
+https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols
+https://en.wikipedia.org/wiki/Combining_Half_Marks
+}
 interface
 
 uses
@@ -43,37 +50,37 @@ type
 
 const
   CombiningAbove: array of Char = [
-  #$030d, { Ì   } #$030e, { ÌŽ } #$0304, { Ì„ } #$0305, { Ì… }
-  #$033f, { Ì¿  } #$0311, { Ì‘ } #$0306, { Ì† } #$0310, { Ì  }
-  #$0352, { Í’  } #$0357, { Í— } #$0351, { Í‘ } #$0307, { Ì‡ }
-  #$0308, { Ìˆ  } #$030a, { ÌŠ } #$0342, { Í‚ } #$0343, { Ì“ }
-  #$0344, { ÌˆÌ } #$034a, { ÍŠ } #$034b, { Í‹ } #$034c, { ÍŒ }
-  #$0303, { Ìƒ  } #$0302, { Ì‚ } #$030c, { ÌŒ } #$0350, { Í  }
-  #$0300, { Ì€  } #$0301, { Ì  } #$030b, { Ì‹ } #$030f, { Ì  }
-  #$0312, { Ì’  } #$0313, { Ì“ } #$0314, { Ì” } #$033d, { Ì½ }
-  #$0309, { Ì‰  } #$0363, { Í£ } #$0364, { Í¤ } #$0365, { Í¥ }
-  #$0366, { Í¦  } #$0367, { Í§ } #$0368, { Í¨ } #$0369, { Í© }
-  #$036a, { Íª  } #$036b, { Í« } #$036c, { Í¬ } #$036d, { Í­ }
-  #$036e, { Í®  } #$036f, { Í¯ } #$033e, { Ì¾ } #$035b, { Í› }
-  #$0346, { Í†  } #$031a  { Ìš }];
+  #$030d, #$030e, { ÌŽ } #$0304, { Ì„ } #$0305, { Ì… }
+  #$033f, #$0311, { Ì‘ } #$0306, { Ì† } #$0310, { Ì  }
+  #$0352, #$0357, { Í— } #$0351, { Í‘ } #$0307, { Ì‡ }
+  #$0308, #$030a, { ÌŠ } #$0342, { Í‚ } #$0343, { Ì“ }
+  #$0344, #$034a, { ÍŠ } #$034b, { Í‹ } #$034c, { ÍŒ }
+  #$0303, #$0302, { Ì‚ } #$030c, { ÌŒ } #$0350, { Í  }
+  #$0300, #$0301, { Ì  } #$030b, { Ì‹ } #$030f, { Ì  }
+  #$0312, #$0313, { Ì“ } #$0314, { Ì” } #$033d, { Ì½ }
+  #$0309, #$0363, { Í£ } #$0364, { Í¤ } #$0365, { Í¥ }
+  #$0366, #$0367, { Í§ } #$0368, { Í¨ } #$0369, { Í© }
+  #$036a, #$036b, { Í« } #$036c, { Í¬ } #$036d, { Í­ }
+  #$036e, #$036f, { Í¯ } #$033e, { Ì¾ } #$035b, { Í› }
+  #$0346, #$031a  { Ìš }];
   CombiningBelow: array of Char = [
-  #$0316, { Ì– } #$0317, { Ì— }  #$0318, { Ì˜ } #$0319, { Ì™ }
-  #$031c, { Ìœ } #$031d, { Ì  }  #$031e, { Ìž } #$031f, { ÌŸ }
-  #$0320, { Ì  } #$0324, { Ì¤ }  #$0325, { Ì¥ } #$0326, { Ì¦ }
-  #$0329, { Ì© } #$032a, { Ìª }  #$032b, { Ì« } #$032c, { Ì¬ }
-  #$032d, { Ì­ } #$032e, { Ì® }  #$032f, { Ì¯ } #$0330, { Ì° }
-  #$0331, { Ì± } #$0332, { Ì² }  #$0333, { Ì³ } #$0339, { Ì¹ }
-  #$033a, { Ìº } #$033b, { Ì» }  #$033c, { Ì¼ } #$0345, { Í… }
-  #$0347, { Í‡ } #$0348, { Íˆ }  #$0349, { Í‰ } #$034d, { Í  }
-  #$034e, { ÍŽ } #$0353, { Í“ }  #$0354, { Í” } #$0355, { Í• }
-  #$0356, { Í– } #$0359, { Í™ }  #$035a, { Íš } #$0323  { Ì£ }];
+  #$0316, #$0317, { Ì— }  #$0318, { Ì˜ } #$0319, { Ì™ }
+  #$031c, #$031d, { Ì  }  #$031e, { Ìž } #$031f, { ÌŸ }
+  #$0320, #$0324, { Ì¤ }  #$0325, { Ì¥ } #$0326, { Ì¦ }
+  #$0329, #$032a, { Ìª }  #$032b, { Ì« } #$032c, { Ì¬ }
+  #$032d, #$032e, { Ì® }  #$032f, { Ì¯ } #$0330, { Ì° }
+  #$0331, #$0332, { Ì² }  #$0333, { Ì³ } #$0339, { Ì¹ }
+  #$033a, #$033b, { Ì» }  #$033c, { Ì¼ } #$0345, { Í… }
+  #$0347, #$0348, { Íˆ }  #$0349, { Í‰ } #$034d, { Í  }
+  #$034e, #$0353, { Í“ }  #$0354, { Í” } #$0355, { Í• }
+  #$0356, #$0359, { Í™ }  #$035a, { Íš } #$0323  { Ì£ }];
   CombiningWithin: array of Char = [
-  #$0315, { Ì• } #$031b, { Ì› } #$0340, { Ì€  } #$0341, { Ì  }
-  #$0358, { Í˜ } #$0321, { Ì¡ } #$0322, { Ì¢  } #$0327, { Ì§ }
-  #$0328, { Ì¨ } #$0334, { Ì´ } #$0335, { Ìµ  } #$0336, { Ì¶ }
-  #$034f, { Í  } #$035c, { Íœ } #$035d, { Í   } #$035e, { Íž }
-  #$035f, { ÍŸ } #$0360, { Í  } #$0362, { Í¢  } #$0338, { Ì¸ }
-  #$0337, { Ì· } #$0361, { Í¡ } #$0489  { Ò‰_ }];
+  #$0315, #$031b, #$0340,  #$0341,
+  #$0358, #$0321, #$0322,  #$0327,
+  #$0328, #$0334, #$0335,  #$0336,
+  #$034f, #$035c, #$035d,  #$035e,
+  #$035f, #$0360, #$0362,  #$0338,
+  #$0337, #$0361, #$0489 ];
 
 function ZalgoText(const InputText: string;
   Intensity: Integer = 8; GlitchType:
@@ -107,7 +114,7 @@ procedure TForm16.FormCreate(Sender: TObject);
 begin
   for var i := 1 to Length(CombiningAbove) do
   begin
-    var idx := ListBox1.Items.Add('-'+CombiningAbove[Pred(i)]);
+    var idx := ListBox1.Items.Add('◌'+CombiningAbove[Pred(i)]);
     ListBox1.ListItems[idx].StyledSettings := [];
     ListBox1.ListItems[idx].Font.Size := 20;
     ListBox1.ListItems[idx].IsChecked := True;
@@ -115,7 +122,7 @@ begin
 
   for var i := 1 to Length(CombiningWithin) do
   begin
-    var idx := ListBox2.Items.Add('-'+CombiningWithin[Pred(i)]);
+    var idx := ListBox2.Items.Add('◌'+CombiningWithin[Pred(i)]);
     ListBox2.ListItems[idx].StyledSettings := [];
     ListBox2.ListItems[idx].Font.Size := 20;
     ListBox2.ListItems[idx].IsChecked := True;
@@ -124,7 +131,7 @@ begin
   ListBox3.ItemHeight := 30;
   for var i := 1 to Length(CombiningBelow) do
   begin
-    var idx := ListBox3.Items.Add('-'+CombiningBelow[Pred(i)]);
+    var idx := ListBox3.Items.Add('◌'+CombiningBelow[Pred(i)]);
     ListBox3.ListItems[idx].StyledSettings := [];
     ListBox3.ListItems[idx].Font.Size := 20;
     ListBox3.ListItems[idx].IsChecked := True;
